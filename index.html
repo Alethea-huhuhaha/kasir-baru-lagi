@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hihi.css">
+    <title>Warung Bambang</title>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Logo aja si hehe -->
+        <h1 class="logo">Warung Bambang</h1>
+
+        <!-- Menu list -->
+        <div class="sidebar-menus">
+            <a href="haha.html" class="active"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="bills.html"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+            <a href="#"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notifications</a>
+            <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Chatbubbles</a>
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>Settings</a>
+        </div>
+        <!-- Logout -->
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+
+    <!-- Lapisan gelap saat menu mobile terbuka -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main -->
+    <div class="main">
+        <!-- Main navbar -->
+        <div class="main-navbar">
+            <!-- Menu when appear on mobile version -->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!-- Search bar -->
+            <div class="search">
+                <input type="text" placeholder="Nak Santap Ape oi">
+                <button class="search-btn">Search</button>
+            </div>
+            <!-- Profile icon on left side of navbar -->
+            <div class="profile">
+                <a class="cart" href="#" id="cartToggle" aria-label="Buka keranjang">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a class="user" href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+
+        <!-- Main highlight -->
+        <div class="main-highlight">
+            <!-- Title section and arrow -->
+            <div class="main-header">
+                <h2 class="main-title">Recomendation</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!-- Highlight menu -->
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <img class="highlight-img" src="saya.jpg" alt="Mie Ayam Enak">
+                    <div class="highlight-desc">
+                        <h4>Mie Ayam Enak</h4>
+                        <p>Rp.10.000</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="hahaha.jpg" alt="Es Teh Manis">
+                    <div class="highlight-desc">
+                        <h4>Es Teh Manis</h4>
+                        <p>Rp.5.000</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="yaaa.jpeg" alt="Mie Jebeww">
+                    <div class="highlight-desc">
+                        <h4>Mie Jebeww</h4>
+                        <p>Rp.10.000</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="huhaha.jpg" alt="Es Marimas">
+                    <div class="highlight-desc">
+                        <h4>Es Marimas</h4>
+                        <p>Rp.2.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main menu / order -->
+        <div class="main-menus">
+            <!-- Filter section -->
+            <div class="main-filter">
+                <div>
+                    <h2 class="main-title">Menu <br>Category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </div>
+                        <p>All Menu</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </div>
+                        <p>Burger</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="pizza-outline"></ion-icon>
+                        </div>
+                        <p>Pizza</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="wine-outline"></ion-icon>
+                        </div>
+                        <p>Wine</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="ice-cream-outline"></ion-icon>
+                        </div>
+                        <p>Ice Cream</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="cafe-outline"></ion-icon>
+                        </div>
+                        <p>Coffee</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fish-outline"></ion-icon>
+                        </div>
+                        <p>Fish</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="nutrition-outline"></ion-icon>
+                        </div>
+                        <p>Healthy</p>
+                    </div>
+                </div>      
+            </div>
+            <hr class="divider">
+
+            <!-- List menu -->
+            <div class="main-detail">
+                <h2 class="main-title">Choose Order</h2>
+                <div class="detail-wrapper">
+                    <!-- Kartu 1 -->
+                    <div class="detail-card" data-name="Mie Nyemek" data-price="15000">
+                        <img class="detail-img" src="Mie nyemek teteh.jpg" alt="Mie Nyemek">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mie Nyemek</h4>
+                                <p class="detail-sub">Mie nyemek pedas dengan topping ayam</p>
+                                <p class="detail-price">Rp.15.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Mie Nyemek ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 2 -->
+                    <div class="detail-card" data-name="Nasi Goreng" data-price="10000">
+                        <img class="detail-img" src="huha.jpg" alt="Nasi Goreng">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasi Goreng</h4>
+                                <p class="detail-sub">Nasi goreng lezat dengan bumbu spesial</p>
+                                <p class="detail-price">Rp.15.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Mie Gacoan ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 3 -->
+                    <div class="detail-card" data-name="Nasi Uduk" data-price="80000">
+                        <img class="detail-img" src="Nasi uduk.jpg" alt="Nasi Uduk">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasi Uduk</h4>
+                                <p class="detail-sub">Nasi uduk lezat dengan sambal dan lauk pendamping</p>
+                                <p class="detail-price">Rp.10.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Paan aja ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 4 -->
+                    <div class="detail-card" data-name="Mie Jebeww" data-price="10000">
+                        <img class="detail-img" src="yaaa.jpeg" alt="Mie Jebeww">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mie Jebeww</h4>
+                                <p class="detail-sub">Mie jebeww dengan bumbu spesial</p>
+                                <p class="detail-price">Rp.10.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Mie Jebeww ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 5 -->
+                    <div class="detail-card" data-name="Es Teh Manis" data-price="5000">
+                        <img class="detail-img" src="hahaha.jpg" alt="Es Teh Manis">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Es Teh Manis</h4>
+                                <p class="detail-sub">Es teh manis segar</p>
+                                <p class="detail-price">Rp.5.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Teh Manis ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 6 -->
+                    <div class="detail-card" data-name="Es Marimas" data-price="2000">
+                        <img class="detail-img" src="huhaha.jpg" alt="Es Marimas">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Es Marimas</h4>
+                                <p class="detail-sub">Minuman serbuk rasa buah</p>
+                                <p class="detail-price">Rp.2.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Marimas ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 7 -->
+                    <div class="detail-card" data-name="Sosis" data-price="5000">
+                        <img class="detail-img" src="sosis.jpg" alt="Sosis">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Sosis</h4>
+                                <p class="detail-sub">Sosis goreng nikmat</p>
+                                <p class="detail-price">Rp.5.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Teh Manis ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-card" data-name="Es Coklat" data-price="8000">
+                        <img class="detail-img" src="es coklat.jpg" alt="Es Coklat">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Es Coklat</h4>
+                                <p class="detail-sub">Minuman serbuk rasa coklat</p>
+                                <p class="detail-price">Rp.8.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Marimas ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- Kartu 6 -->
+                    <div class="detail-card" data-name="Nasi Goreng Ati" data-price="13000">
+                        <img class="detail-img" src="k.jpeg" alt="Nasi Goreng Ati">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasi Goreng Ati</h4>
+                                <p class="detail-sub">Nasi goreng dengan ati ayam</p>
+                                <p class="detail-price">Rp.13.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Marimas ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" data-name="Nasi Goreng Ayam" data-price="15000">
+                        <img class="detail-img" src="p.jpeg" alt="Nasi Goreng Ayam">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasi Goreng Ayam</h4>
+                                <p class="detail-sub">Nasi goreng dengan potongan ayam goreng</p>
+                                <p class="detail-price">Rp.15.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Paan aja ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" data-name="Nasi Goreng Sosis" data-price="13000">
+                        <img class="detail-img" src="q.jpeg" alt="Nasi Goreng Sosis">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasi Goreng Sosis</h4>
+                                <p class="detail-sub">Nasi goreng dengan sosis</p>
+                                <p class="detail-price">Rp.13.000</p>
+                            </div>
+                            <div class="detail-actions">
+                                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                                <button class="btn-add" type="button" aria-label="Tambah Es Marimas ke keranjang">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keranjang belanja -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-panel" id="cartPanel" aria-label="Keranjang pesanan">
+        <div class="cart-header">
+            <div>
+                <h3>Keranjang</h3>
+                <p class="cart-subtitle">Pesanan ini akan masuk ke menu Bills</p>
+            </div>
+            <button class="cart-close" id="cartClose" type="button" aria-label="Tutup keranjang">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-form">
+                <input type="text" id="customerName" placeholder="Nama pelanggan" maxlength="40">
+                <select id="orderType" aria-label="Tipe pesanan">
+                    <option value="Meja 01">Meja 01</option>
+                    <option value="Meja 02">Meja 02</option>
+                    <option value="Meja 03">Meja 03</option>
+                    <option value="Meja 04">Meja 04</option>
+                    <option value="Meja 05">Meja 05</option>
+                    <option value="Take Away">Take Away</option>
+                </select>
+            </div>
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">Rp 0</strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn" type="button" disabled>Buat Pesanan &amp; Masuk Bills</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Script JavaScript -->
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.getElementById('overlay');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        function bukaMenu() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function tutupMenu() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            if (sidebar.classList.contains('active')) {
+                tutupMenu();
+            } else {
+                bukaMenu();
+            }
+        });
+
+        overlay.addEventListener('click', tutupMenu);
+
+        // Tutup menu saat link diklik (khusus mobile)
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', tutupMenu);
+        });
+
+        // Tutup menu kalau layar dibesarkan lagi
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) tutupMenu();
+        });
+
+        // Efek pilih kategori
+        document.querySelectorAll('.filter-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelector('.filter-card.active')?.classList.remove('active');
+                card.classList.add('active');
+            });
+        });
+
+        // Tombol panah untuk geser kartu
+        function pasangPanah(tombolBack, tombolNext, wrapper) {
+            const wadah = document.querySelector(wrapper);
+            if (!wadah) return;
+            document.querySelector(tombolBack)?.addEventListener('click', () => {
+                wadah.scrollBy({ left: -220, behavior: 'smooth' });
+            });
+            document.querySelector(tombolNext)?.addEventListener('click', () => {
+                wadah.scrollBy({ left: 220, behavior: 'smooth' });
+            });
+        }
+
+        pasangPanah('.back', '.next', '.highlight-wrapper');
+        pasangPanah('.back-menus', '.next-menus', '.filter-wrapper');
+
+        // ===== Keranjang pesanan =====
+        const CART_KEY = 'warungCart';
+        const BILLS_KEY = 'warungBills';
+
+        const cartPanel = document.getElementById('cartPanel');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartToggle = document.getElementById('cartToggle');
+        const cartClose = document.getElementById('cartClose');
+        const cartItems = document.getElementById('cartItems');
+        const cartBadge = document.getElementById('cartBadge');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const customerName = document.getElementById('customerName');
+        const orderType = document.getElementById('orderType');
+        const toast = document.getElementById('toast');
+
+        const rupiah = (angka) => 'Rp ' + angka.toLocaleString('id-ID');
+
+        let cart = [];
+        try {
+            const tersimpan = JSON.parse(localStorage.getItem(CART_KEY));
+            if (Array.isArray(tersimpan)) cart = tersimpan;
+        } catch (error) {
+            cart = [];
+        }
+
+        const simpanCart = () => localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        const totalCart = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
+        const jumlahCart = () => cart.reduce((total, item) => total + item.qty, 0);
+
+        function renderCart() {
+            cartItems.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <p>Keranjang masih kosong.<br>Pilih menu di bawah untuk mulai pesan.</p>
+                    </div>`;
+                checkoutBtn.disabled = true;
+            } else {
+                cart.forEach((item, index) => {
+                    const row = document.createElement('div');
+                    row.className = 'cart-item';
+
+                    const img = document.createElement('img');
+                    img.src = item.img;
+                    img.alt = item.name;
+
+                    const info = document.createElement('div');
+                    info.className = 'cart-item-info';
+
+                    const name = document.createElement('p');
+                    name.className = 'cart-item-name';
+                    name.textContent = item.name;
+
+                    const price = document.createElement('p');
+                    price.className = 'cart-item-price';
+                    price.textContent = rupiah(item.price);
+
+                    const qty = document.createElement('div');
+                    qty.className = 'qty-control';
+
+                    const minus = document.createElement('button');
+                    minus.type = 'button';
+                    minus.className = 'qty-btn';
+                    minus.dataset.action = 'minus';
+                    minus.dataset.index = index;
+                    minus.setAttribute('aria-label', 'Kurangi ' + item.name);
+                    minus.textContent = '\u2212';
+
+                    const jumlah = document.createElement('span');
+                    jumlah.className = 'qty-value';
+                    jumlah.textContent = item.qty;
+
+                    const plus = document.createElement('button');
+                    plus.type = 'button';
+                    plus.className = 'qty-btn';
+                    plus.dataset.action = 'plus';
+                    plus.dataset.index = index;
+                    plus.setAttribute('aria-label', 'Tambah ' + item.name);
+                    plus.textContent = '+';
+
+                    qty.append(minus, jumlah, plus);
+                    info.append(name, price);
+                    row.append(img, info, qty);
+                    cartItems.appendChild(row);
+                });
+
+                checkoutBtn.disabled = false;
+            }
+
+            const jumlah = jumlahCart();
+            cartBadge.textContent = jumlah;
+            cartBadge.classList.toggle('show', jumlah > 0);
+            cartTotal.textContent = rupiah(totalCart());
+        }
+
+        function bukaCart() {
+            cartPanel.classList.add('active');
+            cartOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function tutupCart() {
+            cartPanel.classList.remove('active');
+            cartOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function tampilkanToast(pesan) {
+            toast.textContent = pesan;
+            toast.classList.add('show');
+            clearTimeout(tampilkanToast.timer);
+            tampilkanToast.timer = setTimeout(() => toast.classList.remove('show'), 1800);
+        }
+
+        function tambahKeCart(card) {
+            const nama = card.dataset.name;
+            const harga = Number(card.dataset.price) || 0;
+            const gambar = card.querySelector('.detail-img').getAttribute('src');
+
+            const item = cart.find((isi) => isi.name === nama);
+            if (item) {
+                item.qty++;
+            } else {
+                cart.push({ name: nama, price: harga, img: gambar, qty: 1 });
+            }
+
+            simpanCart();
+            renderCart();
+
+            tampilkanToast(nama + ' masuk keranjang');
+            card.classList.add('added');
+            setTimeout(() => card.classList.remove('added'), 350);
+        }
+
+        // Klik kartu menu untuk menambah pesanan
+        document.querySelectorAll('.detail-card').forEach((card) => {
+            card.addEventListener('click', () => tambahKeCart(card));
+
+            const favorit = card.querySelector('.detail-favorites');
+            if (favorit) {
+                favorit.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    favorit.classList.toggle('active');
+                    favorit.setAttribute(
+                        'name',
+                        favorit.classList.contains('active') ? 'bookmark' : 'bookmark-outline'
+                    );
+                });
+            }
+        });
+
+        // Atur jumlah pesanan di keranjang
+        cartItems.addEventListener('click', (event) => {
+            const tombol = event.target.closest('.qty-btn');
+            if (!tombol) return;
+
+            const index = Number(tombol.dataset.index);
+            if (!cart[index]) return;
+
+            if (tombol.dataset.action === 'plus') {
+                cart[index].qty++;
+            } else {
+                cart[index].qty--;
+                if (cart[index].qty <= 0) cart.splice(index, 1);
+            }
+
+            simpanCart();
+            renderCart();
+        });
+
+        // Simpan pesanan ke Bills
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) return;
+
+            let daftarBills = [];
+            try {
+                daftarBills = JSON.parse(localStorage.getItem(BILLS_KEY)) || [];
+            } catch (error) {
+                daftarBills = [];
+            }
+
+            // 4 nomor invoice contoh sudah dipakai di bills.html
+            const nomorBaru = 4 + daftarBills.length + 1;
+
+            daftarBills.push({
+                id: 'INV-' + String(nomorBaru).padStart(3, '0'),
+                customer: customerName.value.trim() || 'Pelanggan',
+                type: orderType.value,
+                time: new Date().toLocaleString('id-ID', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                }),
+                items: cart.map((item) => item.name + ' \u00d7' + item.qty).join(', '),
+                total: totalCart(),
+                status: 'unpaid'
+            });
+
+            localStorage.setItem(BILLS_KEY, JSON.stringify(daftarBills));
+
+            cart = [];
+            simpanCart();
+            renderCart();
+            customerName.value = '';
+            tutupCart();
+
+            window.location.href = 'bills.html';
+        });
+
+        cartToggle.addEventListener('click', (event) => {
+            event.preventDefault();
+            bukaCart();
+        });
+
+        cartClose.addEventListener('click', tutupCart);
+        cartOverlay.addEventListener('click', tutupCart);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') tutupCart();
+        });
+
+        renderCart();
+    </script>
+    
+    <!-- External Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="huhu.js"></script>
+</body>
+</html>

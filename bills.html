@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hihi.css">
+    <title>Bills - Warung Bambang</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h1 class="logo">Warung Bambang</h1>
+
+        <div class="sidebar-menus">
+            <a href="haha.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="bills.html" class="active"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+            <a href="#"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notifications</a>
+            <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Chatbubbles</a>
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>Settings</a>
+        </div>
+
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="main">
+        <div class="main-navbar">
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+
+            <div class="search">
+                <input type="text" placeholder="Cari tagihan pelanggan...">
+                <button class="search-btn">Search</button>
+            </div>
+
+            <div class="profile">
+                <a class="cart" href="haha.html" id="cartToggle" aria-label="Buka keranjang di halaman Home">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a class="user" href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+
+        <header class="page-header">
+            <div>
+                <h2 class="page-title">Bills</h2>
+                <p class="page-subtitle">Daftar pesanan dan status pembayaran pelanggan.</p>
+            </div>
+            <div class="date-chip">
+                <ion-icon name="calendar-outline"></ion-icon>
+                29 Oktober 2026
+            </div>
+        </header>
+
+        <section class="bills-summary">
+            <div class="summary-card">
+                <span class="summary-label"><ion-icon name="receipt-outline"></ion-icon>Total Tagihan</span>
+                <strong class="summary-value" id="totalBills">Rp 0</strong>
+                <span class="summary-note" id="totalCount">0 transaksi</span>
+            </div>
+            <div class="summary-card paid">
+                <span class="summary-label"><ion-icon name="checkmark-circle-outline"></ion-icon>Sudah Dibayar</span>
+                <strong class="summary-value" id="paidBills">Rp 0</strong>
+                <span class="summary-note" id="paidCount">0 transaksi</span>
+            </div>
+            <div class="summary-card unpaid">
+                <span class="summary-label"><ion-icon name="alert-circle-outline"></ion-icon>Belum Dibayar</span>
+                <strong class="summary-value" id="unpaidBills">Rp 0</strong>
+                <span class="summary-note" id="unpaidCount">0 transaksi</span>
+            </div>
+        </section>
+
+        <section class="main-menus bills-panel">
+            <div class="bills-toolbar">
+                <div class="bill-tabs">
+                    <button class="bill-tab active" type="button" data-filter="all">Semua</button>
+                    <button class="bill-tab" type="button" data-filter="unpaid">Belum Bayar</button>
+                    <button class="bill-tab" type="button" data-filter="paid">Lunas</button>
+                </div>
+
+                <label class="bills-search">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" id="billSearch" placeholder="Cari nama atau no. invoice">
+                </label>
+            </div>
+
+            <div class="bill-list" id="billList">
+                <article class="bill-card" data-status="paid" data-total="20000">
+                    <div class="bill-avatar"><ion-icon name="restaurant-outline"></ion-icon></div>
+                    <div class="bill-info">
+                        <div class="bill-top">
+                            <h4>#INV-001</h4>
+                            <span class="bill-customer">Budi</span>
+                        </div>
+                        <p class="bill-meta"><ion-icon name="time-outline"></ion-icon>29 Okt 2026, 12:05 &middot; Meja 03</p>
+                        <p class="bill-items">Mie Nyemek &times;1, Es Teh Manis &times;1</p>
+                    </div>
+                    <div class="bill-right">
+                        <span class="badge paid">Lunas</span>
+                        <strong class="bill-amount">Rp 20.000</strong>
+                        <button class="btn-pay" type="button" disabled>Lunas</button>
+                    </div>
+                </article>
+
+                <article class="bill-card" data-status="unpaid" data-total="24000">
+                    <div class="bill-avatar"><ion-icon name="fast-food-outline"></ion-icon></div>
+                    <div class="bill-info">
+                        <div class="bill-top">
+                            <h4>#INV-002</h4>
+                            <span class="bill-customer">Sari</span>
+                        </div>
+                        <p class="bill-meta"><ion-icon name="time-outline"></ion-icon>29 Okt 2026, 12:45 &middot; Meja 01</p>
+                        <p class="bill-items">Mie Ayam Enak &times;2, Es Marimas &times;2</p>
+                    </div>
+                    <div class="bill-right">
+                        <span class="badge unpaid">Belum Bayar</span>
+                        <strong class="bill-amount">Rp 24.000</strong>
+                        <button class="btn-pay" type="button">Bayar</button>
+                    </div>
+                </article>
+
+                <article class="bill-card" data-status="unpaid" data-total="15000">
+                    <div class="bill-avatar"><ion-icon name="bag-handle-outline"></ion-icon></div>
+                    <div class="bill-info">
+                        <div class="bill-top">
+                            <h4>#INV-003</h4>
+                            <span class="bill-customer">Andi</span>
+                        </div>
+                        <p class="bill-meta"><ion-icon name="time-outline"></ion-icon>29 Okt 2026, 13:10 &middot; Take Away</p>
+                        <p class="bill-items">Mie Jebeww &times;1, Es Teh Manis &times;1</p>
+                    </div>
+                    <div class="bill-right">
+                        <span class="badge unpaid">Belum Bayar</span>
+                        <strong class="bill-amount">Rp 15.000</strong>
+                        <button class="btn-pay" type="button">Bayar</button>
+                    </div>
+                </article>
+
+                <article class="bill-card" data-status="paid" data-total="12000">
+                    <div class="bill-avatar"><ion-icon name="cafe-outline"></ion-icon></div>
+                    <div class="bill-info">
+                        <div class="bill-top">
+                            <h4>#INV-004</h4>
+                            <span class="bill-customer">Rina</span>
+                        </div>
+                        <p class="bill-meta"><ion-icon name="time-outline"></ion-icon>29 Okt 2026, 13:25 &middot; Meja 05</p>
+                        <p class="bill-items">Mie Ayam Enak &times;1, Es Marimas &times;1</p>
+                    </div>
+                    <div class="bill-right">
+                        <span class="badge paid">Lunas</span>
+                        <strong class="bill-amount">Rp 12.000</strong>
+                        <button class="btn-pay" type="button" disabled>Lunas</button>
+                    </div>
+                </article>
+            </div>
+
+            <p class="bill-empty" id="billEmpty" hidden>Tidak ada tagihan yang cocok.</p>
+        </section>
+    </div>
+
+    <script>
+        // ===== Sidebar mobile =====
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.getElementById('overlay');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        function bukaMenu() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function tutupMenu() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.contains('active') ? tutupMenu() : bukaMenu();
+        });
+
+        overlay.addEventListener('click', tutupMenu);
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) tutupMenu();
+        });
+
+        // ===== Data tagihan =====
+        const BILLS_KEY = 'warungBills';
+        const CART_KEY = 'warungCart';
+
+        const billList = document.getElementById('billList');
+        const tabs = document.querySelectorAll('.bill-tab');
+        const searchInput = document.getElementById('billSearch');
+        const emptyState = document.getElementById('billEmpty');
+
+        let billCards = Array.from(document.querySelectorAll('.bill-card'));
+        let activeFilter = 'all';
+
+        const rupiah = (angka) => 'Rp ' + angka.toLocaleString('id-ID');
+
+        const escapeHTML = (teks) => String(teks).replace(/[&<>"']/g, (karakter) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[karakter]));
+
+        function bacaBills() {
+            try {
+                const data = JSON.parse(localStorage.getItem(BILLS_KEY));
+                return Array.isArray(data) ? data : [];
+            } catch (error) {
+                return [];
+            }
+        }
+
+        function simpanBills(data) {
+            localStorage.setItem(BILLS_KEY, JSON.stringify(data));
+        }
+
+        // Buat kartu dari pesanan yang dibuat di halaman Home
+        function buatKartuTagihan(bill) {
+            const card = document.createElement('article');
+            card.className = 'bill-card';
+            card.dataset.status = bill.status === 'paid' ? 'paid' : 'unpaid';
+            card.dataset.total = Number(bill.total) || 0;
+            card.dataset.id = bill.id;
+
+            const lunas = bill.status === 'paid';
+
+            card.innerHTML = `
+                <div class="bill-avatar"><ion-icon name="receipt-outline"></ion-icon></div>
+                <div class="bill-info">
+                    <div class="bill-top">
+                        <h4>#${escapeHTML(bill.id)}</h4>
+                        <span class="bill-customer">${escapeHTML(bill.customer)}</span>
+                    </div>
+                    <p class="bill-meta"><ion-icon name="time-outline"></ion-icon>${escapeHTML(bill.time)} &middot; ${escapeHTML(bill.type)}</p>
+                    <p class="bill-items">${escapeHTML(bill.items)}</p>
+                </div>
+                <div class="bill-right">
+                    <span class="badge ${lunas ? 'paid' : 'unpaid'}">${lunas ? 'Lunas' : 'Belum Bayar'}</span>
+                    <strong class="bill-amount">${rupiah(Number(bill.total) || 0)}</strong>
+                    <button class="btn-pay" type="button" ${lunas ? 'disabled' : ''}>${lunas ? 'Lunas' : 'Bayar'}</button>
+                </div>`;
+
+            return card;
+        }
+
+        // Pasang pencarian & tombol bayar pada satu kartu
+        function siapkanKartu(card) {
+            card.dataset.search = card.querySelector('.bill-info').textContent.toLowerCase();
+
+            const payButton = card.querySelector('.btn-pay');
+            if (!payButton) return;
+
+            payButton.addEventListener('click', () => {
+                if (card.dataset.status === 'paid') return;
+
+                card.dataset.status = 'paid';
+                const badge = card.querySelector('.badge');
+                badge.textContent = 'Lunas';
+                badge.classList.remove('unpaid');
+                badge.classList.add('paid');
+
+                payButton.textContent = 'Lunas';
+                payButton.disabled = true;
+
+                // Simpan status lunas untuk pesanan dari halaman Home
+                if (card.dataset.id) {
+                    const data = bacaBills();
+                    const tagihan = data.find((item) => item.id === card.dataset.id);
+                    if (tagihan) {
+                        tagihan.status = 'paid';
+                        simpanBills(data);
+                    }
+                }
+
+                render();
+            });
+        }
+
+        // Tampilkan pesanan dari keranjang paling atas
+        bacaBills().slice().reverse().forEach((bill) => {
+            const card = buatKartuTagihan(bill);
+            billList.prepend(card);
+            billCards.unshift(card);
+        });
+
+        billCards.forEach(siapkanKartu);
+
+        function updateSummary() {
+            let total = 0, paid = 0, unpaid = 0;
+            let totalCount = 0, paidCount = 0, unpaidCount = 0;
+
+            billCards.forEach((card) => {
+                const nominal = Number(card.dataset.total) || 0;
+                total += nominal;
+                totalCount++;
+
+                if (card.dataset.status === 'paid') {
+                    paid += nominal;
+                    paidCount++;
+                } else {
+                    unpaid += nominal;
+                    unpaidCount++;
+                }
+            });
+
+            document.getElementById('totalBills').textContent = rupiah(total);
+            document.getElementById('paidBills').textContent = rupiah(paid);
+            document.getElementById('unpaidBills').textContent = rupiah(unpaid);
+            document.getElementById('totalCount').textContent = totalCount + ' transaksi';
+            document.getElementById('paidCount').textContent = paidCount + ' transaksi';
+            document.getElementById('unpaidCount').textContent = unpaidCount + ' transaksi';
+        }
+
+        function render() {
+            const keyword = searchInput.value.trim().toLowerCase();
+            let visible = 0;
+
+            billCards.forEach((card) => {
+                const cocokFilter = activeFilter === 'all' || card.dataset.status === activeFilter;
+                const cocokCari = keyword === '' || card.dataset.search.includes(keyword);
+                const tampil = cocokFilter && cocokCari;
+
+                card.hidden = !tampil;
+                if (tampil) visible++;
+            });
+
+            emptyState.hidden = visible !== 0;
+            updateSummary();
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach((t) => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeFilter = tab.dataset.filter;
+                render();
+            });
+        });
+
+        searchInput.addEventListener('input', render);
+
+        // Badge keranjang (kalau masih ada pesanan yang belum di-checkout)
+        try {
+            const cart = JSON.parse(localStorage.getItem(CART_KEY));
+            const jumlah = Array.isArray(cart)
+                ? cart.reduce((total, item) => total + (Number(item.qty) || 0), 0)
+                : 0;
+
+            if (jumlah > 0) {
+                const badge = document.getElementById('cartBadge');
+                badge.textContent = jumlah;
+                badge.classList.add('show');
+            }
+        } catch (error) {
+            // abaikan data keranjang yang rusak
+        }
+
+        render();
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
